@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Traffic Lights </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        main {
+            display: table;
+            padding: 10px;
+            margin: 50px auto;
+            border: 5px solid red;
+        }
+
+        .light {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 20px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 25px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </main>
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+
+    const colors = ['red','yellow','green'];
+
+    var i = 0;
+    var n = 1;
+    var x;
+
+    var start = document.getElementById('start');
+    var stop = document.getElementById('stop');
+
+    var lights = document.getElementsByClassName('light');
+
+    // var light1 = lights[0];
+    // var light2 = lights[1];
+    // var light3 = lights[2];
+
+    start.addEventListener('click',
+        function() {
+            x = setInterval(change_lights,1000);
+        }
+    )
+
+    function change_lights() {
+
+        for(var j = 0 ; j < 3 ; j++) {
+            lights[j].style.backgroundColor = 'black';
+            lights[j].innerText = '';
+        }
+
+        lights[i].style.backgroundColor = colors[i];
+        lights[i].innerText = n;
+        n++;
+
+        if(n > 10) {
+            i++;
+            console.log(i);
+            n = 1;
+
+            if(i == 3) {
+                i = 0;
+            }
+        }
+    }
+
+    stop.addEventListener('click',
+        function() {
+            clearInterval(x);
+        }
+    )
+
+</script>
+
+</html>

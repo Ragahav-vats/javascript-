@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Switch Case </title>
+</head>
+<body>
+	<h1> Calculation Using Math Operator </h1>
+</body>
+<script type="text/javascript">
+	
+	var a,b,choice,output;
+
+	output = '';
+
+	a = Number(prompt('Enter the number 1'));
+	b = Number(prompt('Enter the number 2'));
+	choice = prompt('Enter your choice(+,-,*,/) ');
+
+
+	document.write('Number 1 = ' + a + "<br/>" + 'Choice = ' + choice + "<br/>" + 'Number 2 = ' + b + "<br/>" );
+
+
+	switch(choice) {
+
+	case '+': {
+		
+		output = a + b;
+		break;
+	}
+
+	case '-': {
+
+		output = a - b;
+		break;
+	}
+
+	case '*': {
+
+		output = a * b;
+		break;
+	}
+
+	case '/': {
+
+		output = a / b;
+		break;
+	}
+
+	default : {
+		document.write('Please enter the correct Choice');
+	}
+
+	}
+
+	document.write('Result = ' + output);
+</script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Magic Keyboard </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        main {
+            width: 300px;
+            height: auto;
+            padding: 10px;
+            border: 0.1px solid red;
+            border-radius: 20px;
+            position: absolute;
+            transition: 2s;
+            top: 30%;
+            left: 30%;
+        }
+        .field {
+            width: 100%;
+            height: auto;
+            padding: 5px;
+            margin: 10px 0px;
+           
+        }
+    </style>
+</head>
+<body>
+    <main id="main">
+        <div class="field">
+            <label for=""> Number 1 </label> 
+            <input type="text" name="" id="n1">
+        </div>
+        <div class="field">
+            <label for=""> Number 2 </label> 
+            <input type="text" name="" id="n2">
+        </div>
+        <div class="field">
+            <label for=""> Output </label> 
+            <input type="text" name="" id="ouput">
+        </div>
+    </main>
+</body>
+<script>
+
+    var opr;
+
+    var n1 = document.getElementById('n1');
+    var n2 = document.getElementById('n2');
+    var output = document.getElementById('ouput');
+
+    var main = document.getElementById('main');
+
+
+    window.addEventListener('keydown',
+
+        function(event) {
+
+            // alert(event.keyCode);
+            // console.log(event.keyCode);
+            opr = event.keyCode;
+
+            switch(opr) {
+
+                case 65: {
+                    
+                    ouput.value = eval(n1.value + '+' + n2.value);
+                    break;
+                }
+                
+                case 189: {
+                    ouput.value = eval(n1.value + '-' + n2.value);
+                    break;
+                }
+
+                case 106: {
+                    ouput.value = eval(n1.value + '*' + n2.value);
+                    break;
+                }
+
+                case 191 : {
+                    ouput.value = eval(n1.value + '/' + n2.value);
+                    break;
+                }
+
+                case 38: {
+                    main.style.top = '-10%';
+                    break;
+                }
+
+                case 40: {
+                    main.style.top = '60%';
+                    break;
+                }
+
+                case 39: {
+                    main.style.left = '60%';
+                    break;
+                }
+
+                case 37: {
+                    main.style.left = '-30%';
+                    break;
+                }
+
+               
+            }
+
+        }
+    )
+
+</script>
+</html>

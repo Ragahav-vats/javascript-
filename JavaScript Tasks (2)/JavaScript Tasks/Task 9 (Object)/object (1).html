@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    var userDetails = [
+        {
+            name: 'a',
+            age: 10
+        },
+        {
+            name: 'b',
+            age: 20
+        },
+        {
+            name: 'c',
+            age: 11
+        },
+        {
+            name: 'd',
+            age: 42
+        },
+        {
+            name: 'e',
+            age: 14
+        },
+        {
+            name: 'f',
+            age: 44
+        },
+        {
+            name: 'g',
+            age: 62
+        },
+        {
+            name: 'h',
+            age: 70
+        },
+        {
+            name: 'i',
+            age: 17
+        },
+    ];
+
+    var result = userDetails.filter(function(array) {
+        return array.age >= 18  
+    })    
+
+    // var result = userDetails.filter((array)=> {
+    //     return array.age >= 18  
+    // })
+
+    function test(array){
+        return array.age >= 18  
+    }
+
+    console.log(result);
+
+    console.log(result[0]['name']);
+
+
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Argument Function </title>
+</head>
+<body>
+	<h1> Argument Function </h1>
+</body>
+<script type="text/javascript">
+	
+
+	function add(a=2,b=3,c=5) {
+
+		var o = a + b + c;
+
+		return o;
+
+		document.write(o);
+	}
+
+
+	var x = parseInt(prompt('Enter the number 1 = '));
+
+	var y = parseInt(prompt('Enter the number 2 = '));
+
+	var z = parseInt(prompt('Enter the number 3 = '));
+
+	var output_1 = add(x,y,z);
+
+	var output_2 = add();
+
+	document.write(`sum = ${output_1} and sum = ${output_2}`);
+</script>
+</html>

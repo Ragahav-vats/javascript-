@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>EventListner</title>
+    </head>
+    <body>
+
+        <!-- <button id="click">Click Me</button> -->
+         <button>Click Me1</button>
+         <button>Click Me2</button>
+         <button>Click Me3</button>
+         <button>Click Me4</button>
+
+        <script>
+
+            // function ClickMe(){
+            //     console.log('Raghv Mishra');
+            // }
+            //   document.getElementById('click').addEventListener('click',ClickMe);
+            // //  document.getElementById('click').addEventListener('mouseout',ClickMe);
+            // // document.getElementById('click').addEventListener('mousedown',ClickMe);
+
+            var allButtons=document.querySelectorAll('button');
+
+            allButtons.forEach((value) =>{
+                value.addEventListener('click',(e) =>{
+                    console.log(e.target);
+                })
+            })
+            
+        </script>
+    </body>
+</html>

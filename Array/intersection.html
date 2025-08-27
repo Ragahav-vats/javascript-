@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Intersection Arrays</title>
+</head>
+
+<body>
+
+    <script>
+
+        var numbers=[1,2,3,4];
+        var sum=[3,4,5,6,1];
+        let i = 0
+        intersection=[]
+        for(v of numbers){
+            for(h of sum){
+                if(v==h){
+                    intersection[i] = v
+                    i++
+                }
+            }
+        }
+        document.write(intersection);
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digit Counter </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        main {
+            width: 500px;
+            height: auto;
+            padding: 10px;
+            border: 0.1px solid red;
+            margin: 50px auto;
+            text-align: center;
+        }
+        #box {
+            width: 80px;
+            height: 80px;
+            background-color: cyan;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+        button {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="box">
+            0
+        </div>
+        <button id="start"> Start </button>
+        <button id="stop"> Stop </button>
+        <button id="reset"> Reset </button>
+    </main>
+</body>
+<script>
+
+    var x;
+
+    var box = document.getElementById('box');
+
+    var start = document.getElementById('start');
+    var stop = document.getElementById('stop');
+    var reset = document.getElementById('reset');
+
+    start.addEventListener('click',
+    
+        function() {
+            start.style.pointerEvents = 'none';
+            reset.style.pointerEvents = 'none';
+            x = setInterval( function() {
+
+                var value = box.innerText;
+
+                if(value == 5) {
+                   
+                    window.open('https://www.wscubetech.com/','_blank');
+                }
+                if(value == 10) {
+                   
+                   window.open('login_system.html','_blank');
+               }
+
+                value++;
+
+                box.innerText = value
+
+            }, 1000);
+           
+        }
+    );
+
+    stop.addEventListener('click',
+        
+    function() {
+        clearInterval(x);
+        start.style.pointerEvents = 'fill';
+        reset.style.pointerEvents = 'fill';
+        stop.style.pointerEvents = 'none';
+    }
+    
+    );
+
+    reset.addEventListener('click',
+    
+        function() {
+
+            box.innerText = 0;
+
+        }
+    )
+
+
+
+</script>
+</html>

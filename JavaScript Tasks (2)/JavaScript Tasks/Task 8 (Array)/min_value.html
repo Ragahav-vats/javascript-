@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Min Value </title>
+</head>
+<body>
+	<h1> Min Value </h1>
+	
+</body>
+<script type="text/javascript">
+	
+	const odd = Array(1,3,5,7,9);
+
+	const even = [2,4,6,8,10];
+
+	const colors = ['red', 'blue','green','yellow'];
+
+	const numbers = [11,14,3,17,5,8];
+
+	var min = numbers[0];
+
+	for(var i = 0 ; i < numbers.length ; i++) {
+		if(numbers[i] > min) {
+			min = numbers[i];
+		}
+	}
+
+	document.write(`Min Number - ${min}`);
+
+	var min_2 = numbers[0]; 
+
+	for(var i = 0 ; i < numbers.length ; i++) {
+
+		if(numbers[i] > min_2 && numbers[i] < min) {
+			min_2 = numbers[i]
+		}
+	}
+
+	document.write(`The 2nd min is ${min_2}`);
+	
+</script>
+</html>

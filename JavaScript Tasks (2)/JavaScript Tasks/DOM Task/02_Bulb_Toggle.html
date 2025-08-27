@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bulb </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        main {
+            width: 600px;
+            height: auto;
+            padding: 10px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .image {
+            width: auto;
+            height: 200px;
+            border: 0.1px solid blue;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="images/off.gif" alt="" id="img"> <br/>
+            
+        <button onclick="change_status(this)" id="btn"> ON </button>
+    </main>
+</body>
+<script>
+    var img = document.getElementById('img');
+
+    function change_status(btn) {
+        var text = btn.innerText;
+
+        if(text == 'ON') {
+            img.src = "images/on.gif";
+            btn.innerText = 'OFF';
+        } else {
+            img.src = "images/off.gif";
+            btn.innerText = 'ON';
+        }
+    }
+
+</script>
+</html>

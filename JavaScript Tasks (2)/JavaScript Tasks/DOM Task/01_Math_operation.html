@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Math Operations </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 400px;
+            height: auto;
+            padding: 10px;
+            margin: 50px auto;
+            border: 0.1px solid red;
+        }
+        .field {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="field">
+            <label for=""> Number 1 </label>
+            <input type="number" id="n1">
+        </div>
+        <div class="field">
+            <label for=""> Operation </label>
+            <select name="" id="opr">
+                <option value="+"> + </option>
+                <option value="-"> - </option>
+                <option value="*"> * </option>
+                <option value="/"> / </option>
+            </select>
+        </div>
+        <div class="field">
+            <label for=""> Number 2 </label>
+            <input type="nu" id="n2">
+        </div>
+        <div class="field">
+            <button onclick="cal()"> Result </button>
+            <input type="text" id="result">
+        </div>
+    </main>
+</body>
+<script>
+
+    var n1 = document.getElementById('n1');
+    var opr = document.getElementById('opr');
+    var n2 = document.getElementById('n2');
+    var result = document.getElementById('result');
+
+    
+    function cal() {
+
+        var number1 = n1.value;
+        var operation = opr.value;
+        var number2 = n2.value;
+
+        // console.log(typeof(number1));
+        // console.log(typeof(operation));
+        // console.log(typeof(number2));
+
+        var ouput = eval(number1 + operation + number2);
+
+        result.value = ouput;
+
+        n1.value = '';
+        n2.value = '';
+    }
+
+
+
+
+</script>
+</html>

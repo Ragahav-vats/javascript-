@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Number Switch </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 800px;
+            height: 300px;
+            border: 0.1px solid red;
+            margin: 50px auto;
+
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 10px 0px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+            font-weight: bold;
+            border: 0.1px solid black;
+        }
+
+        .buttons {
+
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="one">
+        <div class="boxes">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="swipe1()"> > </button>
+            <button onclick="swipe2()"> >> </button>
+            <button onclick="swipe3()"> >>> </button>
+        </div>
+    </div>
+</body>
+<script>
+
+    var boxes = document.getElementsByClassName('box');
+
+    var box1 = boxes[0];
+    var box2 = boxes[1];
+    var box3 = boxes[2];
+
+    function swipe1() {
+
+        if (box1.innerText != '') {
+
+            if (box2.innerText != '') {
+                box3.innerText = box2.innerText;
+                box2.innerText = box1.innerText;
+                box1.innerText = '';
+            } else {
+                box2.innerText = box1.innerText;
+                box1.innerText = '';
+            }
+
+        } else {
+            alert("It's already blank");
+        }
+    }
+
+    function swipe2() {
+
+        if (box2.innerText != '') {
+
+            if (box3.innerText != '') {
+                box1.innerText = box3.innerText;
+                box3.innerText = box2.innerText;
+                box2.innerText = '';
+            } else {
+                box3.innerText = box2.innerText;
+                box2.innerText = '';
+            }
+
+        } else {
+            alert("It's already blank");
+        }
+    }
+
+    function swipe3() {
+
+        if (box3.innerText != '') {
+
+            if (box1.innerText != '') {
+                box2.innerText = box1.innerText;
+                box1.innerText = box3.innerText;
+                box3.innerText = '';
+            } else {
+                box1.innerText = box3.innerText;
+                box3.innerText = '';
+            }
+
+        } else {
+            alert("It's already blank");
+        }
+    }
+
+
+</script>
+
+</html>

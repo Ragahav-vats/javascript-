@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> User Bound Using While Loop </title>
+</head>
+<body>
+	<h1> User Bound Using While Loop </h1>
+</body>
+<script type="text/javascript">
+	
+	var math,sci,eng,hindi,sst;
+
+	math = Number(prompt('Enter your maths marks in range (0 to 100) '));
+
+
+	while((math < 0) || (math > 100)) {
+
+		math = Number(prompt('You entered a wrong number.. Please Enter your maths marks in this range (0 to 100) '));
+
+	}
+
+	sci = Number(prompt('Enter your Science marks range in (0 to 100) '));
+
+	while((sci < 0) || (sci > 100)) {
+
+		math = Number(prompt('You entered a wrong number.. Please Enter your science marks in this range (0 to 100) '));
+
+	}
+
+	eng = Number(prompt('Enter your English marks in range (0 to 100) '));
+
+	while((eng < 0) || (eng > 100)) {
+
+		math = Number(prompt('You entered a wrong number.. Please Enter your English marks in this range (0 to 100) '));
+
+	}
+
+	hindi = Number(prompt('Enter your Hindi marks in range (0 to 100) '));
+
+	while((hindi < 0) || (hindi > 100)) {
+
+		math = Number(prompt('You entered a wrong number.. Please Enter your Hindi marks in this range (0 to 100) '));
+
+	}
+
+	sst = Number(prompt('Enter your SST marks in range (0 to 100) '));
+
+	while((sst < 0) || (sst > 100)) {
+
+		math = Number(prompt('You entered a wrong number.. Please Enter your SST marks in this range (0 to 100) '));
+
+	}
+
+	if((math > 35) && (sci > 35) && (eng > 35) && (hindi > 35) && (sst > 35)) {
+
+		total = math + sci + eng + hindi + sst;
+
+		document.write('total = ' + total + "<br/>");
+
+		per = (total/500) * 100;
+
+		document.write('percentage = ' + per + '%' + "<br/>");
+
+		if(per >= 60) {
+			document.write('First')
+		} 
+
+		else if((per >= 48) && (per < 60)) {
+			document.write('Second')
+		}
+
+		else {
+			document.write('Third');
+		}
+
+
+	} else {
+		document.write('Fail');
+	}
+
+</script>
+</html>

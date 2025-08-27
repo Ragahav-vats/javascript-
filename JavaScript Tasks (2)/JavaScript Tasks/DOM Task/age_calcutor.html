@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Age Calculator </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        main {
+            width: 350px;
+            height: auto;
+            padding: 10px;
+            border: 0.1px solid red;
+            border-radius: 10px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        input {
+            margin-left: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            margin: 20px 0px;
+        }
+        #result {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            border: 0.1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <label for=""> Select Your Date of Birth </label>
+        <input type="date" id="date">
+        <button id="btn"> Get Age </button>
+        <div id="result">
+
+        </div>
+    </main>
+</body>
+<script>
+
+    var value;
+
+    var date = document.getElementById('date');
+    var btn = document.getElementById('btn');
+    var result = document.getElementById('result');
+
+    btn.addEventListener('click',
+        function() {
+
+            value = date.value;
+
+            console.log(value);
+
+            var dob_date = new Date(value);
+
+            dob_time = dob_date.getTime()/1000/3600/24/365;
+
+            console.log(dob_time);
+
+
+            var current_date = new Date();
+
+            current_time = current_date.getTime()/1000/3600/24/365;
+
+            console.log(current_time);
+
+            age = current_time - dob_time;
+
+            console.log(age);
+
+            result.innerText = age;
+
+        }
+    )
+
+
+</script>
+</html>

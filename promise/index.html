@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>My web page</title>
+    </head>
+    <body>
+
+        <script>
+
+            var getData=async() =>{
+                var output= await fetch('https://dummyjson.com/products');
+                var input=await output.json();
+                console.log(input. products)
+            };
+
+            getData();
+        </script>
+
+        
+    </body>
+</html>

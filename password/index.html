@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>password</title>
+    </head>
+    <body>
+        <input type="password" id="pass">
+        <button id="btn" onclick="showPassword()">show</button>
+    </body>
+    <script>
+
+        var inputPassword=document.getElementById('pass');
+        var button=document.getElementById('btn');
+
+          function  showPassword(){
+            var oldType=inputPassword.type;
+            if(oldType=="password"){
+                inputPassword.type='text'
+                btn.innerHTML="hide"
+              }
+              else{
+                inputPassword.type='password'
+                btn.innerHTML="show"
+              }
+            }
+
+    </script>
+</html>

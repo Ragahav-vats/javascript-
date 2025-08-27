@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		*{
+			margin: 0px;
+			font-family: sans-serif;
+			padding: 0px;
+		}
+		.allAlbums{
+			text-align: center;
+			padding: 10px;
+		}
+		.allAlbums button{
+			padding: 7px 25px;
+			border: none;
+			color: beige;
+			cursor: pointer;
+			background: red;
+		}
+		.photo{
+			width: 1320px;
+			margin: auto;
+			flex-wrap: wrap;
+			display: flex;
+		}	
+
+		.photoItems{
+			flex-basis: 23%;
+			margin: 1%;
+		}
+		.photoItems img{
+			width: 100%;
+			display: block;
+		}
+		.photoItems h3{
+			background-color: brown;
+			padding: 10px 0px;
+			text-align: center;
+			color: white;
+		}
+		.activeBTN{
+			background-color: blueviolet !important;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="allAlbums">
+	</div>		
+
+
+	<div class="photo">
+		
+		
+	</div>
+</body>
+<script type="text/javascript" src="photo.js"></script>
+<script>
+
+	var allAlbums=document.querySelector(".allAlbums");
+	var photoN=document.querySelector(".photo");
+ let allAlbumsCat=()=>{
+	
+	albums.forEach((element,index) => {
+
+		allAlbums.innerHTML+=`<button class="${(index==0) ? 'activeBTN' : '' }"  onclick='getPhoto(${element.id},${index})'>${element.title}</button>
+	`;
+	});
+}
+
+
+
+allAlbumsCat()
+
+let getPhoto=(currentAID=1,index)=>{
+
+	var allBtn=document.querySelectorAll(".allAlbums button");
+	allBtn.forEach((btn)=>{
+		btn.classList.remove('activeBTN')
+	})
+	allBtn[index].classList.add('activeBTN')
+
+
+
+
+
+
+	photoN.innerHTML='';
+
+	let allphoto=photo.filter((v)=>v.albumId==currentAID);
+	
+
+	allphoto.forEach((element)=>{
+		
+		photoN.innerHTML+=`<div class="photoItems">
+			<img src="${element.url}" alt="">
+			<h3>${element.title}</h3>
+		</div>`
+	})
+
+
+}
+
+
+getPhoto(1,0);
+
+
+	
+	
+</script>
+</html>

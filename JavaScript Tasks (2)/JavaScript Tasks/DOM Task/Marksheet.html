@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Marksheet </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .main {
+            width: 500px;
+            border: 0.1px solid red;
+            margin: 20px auto;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .field {
+            margin: 5px 0px;
+            display: flex;
+            padding: 5px;
+        }
+
+        .subject {
+            width: 70%;
+            text-align: center;
+            border: 0.1px solid black;
+        }
+
+        .marks {
+            width: 30%;
+            text-align: center;
+            border: 0.1px solid black;
+        }
+    </style>
+    <script>
+        var math = parseFloat(prompt('Enter your Maths marks'));
+        var sci = parseFloat(prompt('Enter your Science marks'));
+        var eng = parseFloat(prompt('Enter your English marks'));
+        var hindi = parseFloat(prompt('Enter your Hindi marks'));
+        var sst = parseFloat(prompt('Enter your SST marks'));
+    
+        var final_result, total, per, div;
+    
+        if ((math > 35) && (sci > 35) && (eng > 35) && (hindi > 35) && (sst > 35)) {
+    
+            final_result = 'Pass';
+    
+            total = math + sci + eng + hindi + sst;
+    
+            per = ((total / 500) * 100);
+    
+            if (per >= 60) {
+                div = 'First Division';
+            }
+            else if ((per >= 48) && (per < 60)) {
+                div = 'Second Division';
+            }
+            else {
+                div = 'Third Division';
+            }
+    
+        } else {
+            final_result = "Fail";
+            total = "-";
+            per = "_"
+            div = "-"
+    
+        }
+    
+        var marks = document.getElementsByClassName('marks');
+    
+        function print_marksheet() {
+            
+            marks[0].innerText = math;
+    
+            marks[1].innerText = sci;
+    
+            marks[2].innerText = eng;
+    
+            marks[3].innerText = hindi;
+    
+            marks[4].innerText = sst;
+    
+            marks[5].innerText = total;
+    
+            marks[6].innerText = per + "%";
+    
+            marks[7].innerText = div;
+    
+            marks[8].innerText = final_result;
+        }
+
+        window.print();
+    
+    </script>
+    
+</head>
+
+<body>
+    <div class="main">
+        <div class="heading">
+            Marksheet
+        </div>
+        <div class="field">
+            <div class="subject"> Maths </div>
+            <div class="marks"></div>
+        </div>
+        <div class="field">
+            <div class="subject"> Science </div>
+            <div class="marks"><script>document.write(sci)</script></div>
+        </div>
+        <div class="field">
+            <div class="subject"> English </div>
+            <div class="marks"></div>
+        </div>
+        <div class="field">
+            <div class="subject"> Hindi </div>
+            <div class="marks"></div>
+        </div>
+        <div class="field">
+            <div class="subject"> SST </div>
+            <div class="marks"></div>
+        </div>
+        <div class="field">
+            <div class="subject"> Total </div>
+            <div class="marks"></div>
+        </div>
+        <div class="field">
+            <div class="subject"> Percentage </div>
+            <div class="marks"></div>
+        </div>
+        <div class="field">
+            <div class="subject"> Division </div>
+            <div class="marks"></div>
+        </div>
+        <div class="field">
+            <div class="subject"> Final Result </div>
+            <div class="marks"></div>
+        </div>
+        <button onclick="print_marksheet()"> Print Marksheet </button>
+    </div>
+</body>
+
+</html>

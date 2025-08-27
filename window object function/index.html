@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Time Countdown</title>
+    </head>
+    <body>
+        <button onclick="showValue()">set Time Out</button>
+        <button onclick="clearValue()">clear Time Out</button>
+        <button onclick="showValueInterval()">set Interval</button>
+        <button onclick="clearValueInterval()">clear Interval</button>
+
+        
+
+        <script>
+
+            var Y='';
+            var i=0;
+
+            function showValueInterval(){
+                Y=setInterval(() =>{
+                    i++;
+                    console.log(i)
+                },3000)
+            }
+
+            function clearValueInterval(){
+                i=0;
+                clearInterval(y);
+            }
+            function showAlert() {
+                console.log('RAGHAV MISHRA')
+            };
+
+            showAlert();
+            setTimeout(showAlert,2000);
+
+                setTimeout(() =>{
+                    console.log('RAGHAV MISHRA');
+                } ,5000)
+                var x= '';
+
+            function showValue() {
+                x = setTimeout(() => {
+                    console.log("This is an alert message!");
+                }, 3000);
+            }
+
+            function clearValue(){
+                clearTimeout(x);
+            }
+            
+        </script>
+    </body>
+</html>

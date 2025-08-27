@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Max Value </title>
+</head>
+<body>
+	<h1> 2nd Min Value </h1>
+</body>
+<script type="text/javascript">
+	
+	const numbers = [5,0,55,45,88,100];
+
+	var min = numbers[0]; 
+
+	for(var i = 0 ; i < numbers.length ; i++) {
+
+		if(numbers[i] < min) {
+			min = numbers[i];
+		}
+	}
+
+	var min_2 = numbers[0]; 
+
+	for(var i = 0 ; i < numbers.length ; i++) {
+
+		if(numbers[i] < min_2 && numbers[i] > min) {
+			min_2 = numbers[i]
+		}
+	}
+
+	document.write(`The 2nd min is ${max_2}`);
+
+</script>
+</html>

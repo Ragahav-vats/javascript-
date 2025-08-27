@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Recursion </title>
+</head>
+<body>
+	<h1> Recursion </h1>
+</body>
+
+<script type="text/javascript">
+
+var i = 1;
+
+
+function p(num) {
+
+
+	document.write(num + "<br/>")
+
+	num++;
+
+	if(num <= 12) {
+
+		return p(num);
+	}
+	else{
+
+		return num;
+	}
+
+	
+	
+
+}
+
+let o = p(i);
+
+console.log(o);
+	
+</script>
+
+
+</html>

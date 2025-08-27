@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Change Bg</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            background-color: cyan;
+        }
+        main {
+            width: 600px;
+            height: 300px;
+            background-color: white;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main id="main"></main>
+    <input type="" id="input" value=""/>
+    <button id="btn"> Change Background Color </button>
+</body>
+<script>
+
+    
+
+    // function changeColor(){
+    //     if(input.value == ''){
+    //         main.style.backgroundColor = 'black';
+    //         input.value = 'black';
+    //     } else if(input.value == 'black'){
+    //         main.style.backgroundColor = 'orange';
+    //         input.value = 'orange';
+    //     } else if(input.value == 'orange'){
+    //         main.style.backgroundColor = 'red';
+    //         input.value = 'red';
+    //     } else {
+    //         main.style.backgroundColor = '';
+    //         input.value = '';
+    //     }
+    // }
+
+    var main = document.getElementById('main');
+    var btn = document.getElementById('btn');
+    var input = document.getElementById('input');
+
+
+
+    btn.addEventListener('click', function() {
+
+        var style = getComputedStyle(main);
+        var color = style.backgroundColor;
+
+        console.log(color);
+
+       if(color == 'rgb(255, 255, 255)') {
+            main.style.backgroundColor = 'black';
+       } else {
+            main.style.backgroundColor = 'white';
+       }
+
+    })
+
+</script>
+</html>

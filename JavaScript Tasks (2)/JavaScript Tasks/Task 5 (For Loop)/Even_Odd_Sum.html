@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Even Sum </title>
+</head>
+<body>
+	<h1> Even Sum </h1>
+</body>
+<script type="text/javascript">
+
+	var userInput = Number(prompt('Enter value'));
+
+	evenSum = 0;
+	oddSum = 0;
+
+	for(var i =1; i <= userInput; i++){
+
+		if(i % 2 ==0){
+			document.write('Even Number - '+i+'<br>');
+			evenSum += i;
+		} else {
+			document.write('Odd Number - '+i+'<br>');
+			oddSum += i;
+		}
+		
+
+	}
+
+	document.write('Even Sum - '+evenSum+'<br>');
+	document.write('Odd Sub - '+oddSum+'<br>');
+
+	
+	
+	
+	
+	
+	
+	// var even_sum = 0;
+	// var odd_sum = 0;
+	
+	// for(var i = 1 ; i <= userInput ; i++) {
+
+	// 	if(i % 2 == 0) {
+
+	// 		even_sum = even_sum + i;
+			
+	// 	} else {
+
+	// 		odd_sum = odd_sum + i;
+
+	// 	}
+	// }
+
+	// document.write('Sum of Even Number in between 1 & 100 is = ' + even_sum + "<br/>");
+	// document.write('Sum of Odd Number in between 1 & 100 is = ' + odd_sum);
+
+</script>
+</html>

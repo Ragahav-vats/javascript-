@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Copy Text </title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #box {
+            width: 500px;
+            height: 200px;
+            color: red;
+            font-size: 50px;
+            margin: 50px auto;
+            font-style: italic;
+            text-align: center;
+            border: 0.1px solid red;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input" onkeyup="copy_text()">
+    <div id="box">
+
+    </div>
+</body>
+<script>
+    var input = document.getElementById('input');
+    var box = document.getElementById('box');
+
+    function copy_text() {
+        box.innerText = input.value;
+    }
+
+    
+
+
+</script>
+</html>

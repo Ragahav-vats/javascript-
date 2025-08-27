@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Factorial </title>
+
+</head>
+<body>
+	<h1> Factorial </h1>
+</body>
+<script type="text/javascript">
+	
+
+	var fact = 1;
+
+	var num = parseInt(prompt('Enter the number = ')) 
+
+	var o = factorial(num);
+
+	console.log(o)
+
+
+	function factorial(number) {
+
+		fact = fact * number;
+
+	//fact = 1 * 5;(5)
+	//fact = 5 * 4;(20)
+	//fact = 20 * 3;(60)
+	//fact = 60 * 2;(120)
+	// fact = 120 * 1 (120)
+
+		if(number == 1) {
+
+			document.write(fact);
+			return fact;
+		}
+		else {
+			number--;
+			return factorial(number);
+		}
+
+
+	}
+</script>
+</html>

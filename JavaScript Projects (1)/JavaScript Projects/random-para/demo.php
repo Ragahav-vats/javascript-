@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add the jQuery file into Html by downloading and Including file </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+    <h1>Hello User!!</h1>
+
+</body>
+
+</html>

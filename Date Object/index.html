@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Data Object</title>
+    </head>
+    <body>
+
+
+        <script>
+
+            var getDate=new Date();
+            console.log(getDate)
+            console.log(getDate.getFullYear())
+            console.log(getDate.getMonth())
+
+            var allMonths=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            console.log(allMonths[getDate.getMonth()]);
+
+            console.log(getDate.getDate())
+           
+            console.log(getDate.getHours())
+            console.log(getDate.getSeconds())
+            console.log(getDate.getMilliseconds()/1000); // returns milliseconds in seconds
+
+             console.log(getDate.getTime()/1000); // returns milliseconds in seconds
+
+            console.log(getDate.getDay())
+            var allDays=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            console.log(allDays[getDate.getDay()]);
+
+        </script>
+    </body>
+</html>

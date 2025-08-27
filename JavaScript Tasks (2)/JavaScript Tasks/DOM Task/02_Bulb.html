@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bulb </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        main {
+            width: 600px;
+            height: auto;
+            padding: 10px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .image {
+            width: auto;
+            height: 200px;
+            border: 0.1px solid blue;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button onclick="bulb('images/on.gif')"> ON </button>
+        
+        <img src="images/off.gif" alt="" id="img">
+            
+        <button onclick="bulb('images/off.gif')"> OFF </button>
+    </main>
+</body>
+<script>
+
+    var img = document.getElementById('img');
+
+    function bulb(x) {
+        document.getElementById('img').src = x;
+    }
+
+
+
+
+    // function bulb_on() {
+
+    //     img.src = "images/on.gif";
+
+    // };
+
+    // function bulf_off() {
+
+    //     img.src = "images/off.gif";
+    // }
+
+</script>
+</html>

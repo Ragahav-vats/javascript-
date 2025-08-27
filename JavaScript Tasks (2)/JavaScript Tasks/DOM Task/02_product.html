@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Product </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        main {
+            width: 500px;
+            height: auto;
+            padding: 10px;
+           
+            margin: 50px auto;
+        }
+        .box {
+            width: 250px;
+            height: auto;
+            padding: 10px;
+            
+            margin: auto;
+        }
+        .image {
+            width: 100%;
+            height: 150px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .counter {
+            width: 250px;
+            padding: 10px;
+           
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="image">
+                <img src="images/3.jpg" alt="">
+            </div>
+            <div>
+                Product Name : 
+            </div>
+            <div>
+                Price : 
+            </div>
+        </div>
+        <div class="counter">
+            <button onclick="plus()" id="p"> + </button>
+            <button id="btn"> 0 </button>
+            <button onclick="minus()" id="m"> - </button>
+        </div>
+    </main>
+   
+</body>
+<script>
+
+    var btn = document.getElementById('btn');
+
+    var plus_btn = document.getElementById('p');
+
+    var minus_btn = document.getElementById('m')
+
+    function plus() {
+        
+        var value = btn.innerText;
+        console.log(typeof(value));
+
+        if(value < 5) {
+
+            value++;
+            btn.innerText = value;
+            minus_btn.disabled = false;
+
+        } else {
+            plus_btn.disabled = true;
+        }
+
+       
+
+    };
+
+    function minus() {
+
+        var value = btn.innerText;
+
+        if(value > 0 ) {
+
+            value--;
+            btn.innerText = value;
+            plus_btn.disabled = false;
+
+        } else {
+            minus_btn.disabled = true;
+        }
+
+
+       
+
+    };
+
+</script>
+</html>
