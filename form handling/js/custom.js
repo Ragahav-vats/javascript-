@@ -34,3 +34,33 @@ var states = [
     document.getElementById('state').innerHTML = showStates;
 });
 
+var userData = localStorage.getItem('userInfo');
+if(userData){
+    userInfo = JSON.parse(userData);
+}else{
+    userInfo = [];
+}
+
+document.getElementById('formHandler').addEventListener('submit', (event)=>{
+     event.preventDefault();
+
+    //  var name = document.getElementById('name').value;
+    //  var email = event.target.email.value;
+    //  console.log(email);
+
+    var userData = {
+        name : document.getElementById('name').value,
+        email : document.getElementById('email').value,
+        mobile : document.getElementById('mobile').value,
+        country : document.getElementById('country').value,
+        state : document.getElementById('state').value,
+    }
+    // var Data = [userData];
+    // var userInfo = (Data);
+    userInfo.push(userData);
+    console.log(userInfo);
+    localStorage.setItem('userInfo',JSON.stringify(userInfo));
+    event.target.reset();
+    
+})
+
